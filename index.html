@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desapegar para Viver | Ebook de Superação Amorosa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f7fe;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header (Social Proof + Offer Timer) */
+        .header-bar {
+            background: linear-gradient(45deg, #6a4ba9, #8a6bc9);
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .header-bar i {
+            margin-right: 8px;
+            color: #ffd700;
+        }
+        
+        /* Hero Section (Emotional Hook) */
+        .hero {
+            background: linear-gradient(rgba(106, 75, 169, 0.8), rgba(138, 107, 201, 0.8)), 
+                        url('https://images.unsplash.com/photo-1491349174775-aaafddd81942?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Price Box (Scarcity + Urgency) */
+        .price-box {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 400px;
+            margin: -50px auto 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            position: relative;
+            z-index: 2;
+        }
+        
+        .price-box .old-price {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.2rem;
+        }
+        
+        .price-box .new-price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #6a4ba9;
+            margin: 5px 0;
+        }
+        
+        .price-box .offer-timer {
+            background: #fff8e6;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 15px 0;
+            font-weight: 600;
+        }
+        
+        /* CTA Button (High Contrast) */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff6b6b, #ff8e8e);
+            color: white;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            margin: 20px 0;
+            transition: all 0.3s;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.6);
+        }
+        
+        /* Benefits Section (Bullet Points) */
+        .benefits {
+            padding: 80px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .benefits h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: #6a4ba9;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+        }
+        
+        .benefit-icon {
+            background: linear-gradient(45deg, #8a6bc9, #6a4ba9);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+        
+        /* Testimonials (Social Proof) */
+        .testimonials {
+            background: #f0edfc;
+            padding: 80px 20px;
+        }
+        
+        .testimonial-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            max-width: 350px;
+        }
+        
+        .testimonial-card .stars {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+        
+        /* FAQ (Reduce Objections) */
+        .faq {
+            padding: 80px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #e0d7f7;
+            padding-bottom: 20px;
+        }
+        
+        /* Guarantee (Risk Reversal) */
+        .guarantee {
+            background: linear-gradient(45deg, #6a4ba9, #8a6bc9);
+            color: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+        
+        .guarantee-badge {
+            background: white;
+            color: #6a4ba9;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 30px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Social Proof Header Bar -->
+    <div class="header-bar">
+        <i class="fas fa-users"></i> 
+        <span id="customer-count">1,247</span> pessoas já transformaram suas vidas com este método!
+        <span style="margin: 0 15px;">|</span>
+        <i class="fas fa-clock"></i> 
+        Oferta expira em: <span id="countdown">04:59:32</span>
+    </div>
+    
+    <!-- Hero Section (Emotional Hook) -->
+    <section class="hero">
+        <h1>Você merece se libertar da dor de um amor que acabou</h1>
+        <p>O ebook "Desapegar para Viver" vai te guiar passo a passo na jornada de reconstrução emocional depois de um término doloroso.</p>
+    </section>
+    
+    <!-- Price Box (Scarcity + Urgency) -->
+    <div class="price-box">
+        <h3 style="color: #6a4ba9; margin-bottom: 10px;">OFERTA POR TEMPO LIMITADO</h3>
+        <div class="old-price">De R$ 97,00</div>
+        <div class="new-price">por R$ 7,90</div>
+        <div class="offer-timer">
+            <i class="fas fa-bolt"></i> Essa promoção termina em: <span id="countdown-box">04:59:32</span>
+        </div>
+        <a href="#cta" class="cta-button">
+            <i class="fas fa-lock"></i> GARANTIR MEU ACESSO
+        </a>
+        <p style="font-size: 0.9rem;"><i class="fas fa-shield-alt"></i> Pagamento 100% seguro</p>
+    </div>
+    
+    <!-- Benefits Section -->
+    <section class="benefits">
+        <h2>O que você vai conquistar com este ebook:</h2>
+        
+        <div class="benefit-item">
+            <div class="benefit-icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <div>
+                <h3>Reconstruir sua autoestima</h3>
+                <p>Técnicas comprovadas para se reconectar com seu valor e parar de buscar validação no outro.</p>
+            </div>
+        </div>
+        
+        <div class="benefit-item">
+            <div class="benefit-icon">
+                <i class="fas fa-unlock"></i>
+            </div>
+            <div>
+                <h3>Quebrar o ciclo da dependência emocional</h3>
+                <p>Exercícios práticos para desenvolver autonomia afetiva e não mais aceitar "migalhas".</p>
+            </div>
+        </div>
+        
+        <div class="benefit-item">
+            <div class="benefit-icon">
+                <i class="fas fa-feather"></i>
+            </div>
+            <div>
+                <h3>Encontrar paz e propósito</h3>
+                <p>Métodos para transformar a dor em crescimento e redescobrir quem você é fora do relacionamento.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Testimonials (Social Proof) -->
+    <section class="testimonials">
+        <h2 style="text-align: center; font-family: 'Playfair Display'; color: #6a4ba9; margin-bottom: 50px;">O que dizem quem já leu:</h2>
+        
+        <div style="display: flex; justify-content: center; flex-wrap: wrap;">
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Depois de 5 anos em um relacionamento abusivo, esse ebook me deu a força que eu precisava para me reencontrar. Hoje me sinto completa sozinha!"</p>
+                <p style="font-weight: 600; margin-top: 15px;">- Ana C., 32 anos</p>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p>"Os exercícios práticos me ajudaram mais que 6 meses de terapia. Finalmente entendi que meu valor não depende de estar em um relacionamento."</p>
+                <p style="font-weight: 600; margin-top: 15px;">- Ricardo M., 28 anos</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ (Reduce Objections) -->
+    <section class="faq">
+        <h2 style="font-family: 'Playfair Display'; color: #6a4ba9; text-align: center; margin-bottom: 50px;">Perguntas frequentes</h2>
+        
+        <div class="faq-item">
+            <h3 style="color: #6a4ba9;">Como receberei o ebook?</h3>
+            <p>Imediatamente após a confirmação do pagamento, você receberá um e-mail com o link para download do ebook. Também terá acesso a uma área de membros com materiais complementares.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3 style="color: #6a4ba9;">Posso comprar se nunca fiz terapia?</h3>
+            <p>Sim! O ebook foi escrito justamente para quem não tem acesso a terapia ou quer complementar seu processo de autoconhecimento. A linguagem é acessível e os exercícios são progressivos.</p>
+        </div>
+        
+        <div class="faq-item">
+            <h3 style="color: #6a4ba9;">Existe garantia?</h3>
+            <p>Sim! Você tem 7 dias para solicitar reembolso se achar que o conteúdo não foi útil. Sem perguntas, sem burocracia.</p>
+        </div>
+    </section>
+    
+    <!-- Guarantee (Risk Reversal) -->
+    <section class="guarantee">
+        <div class="guarantee-badge">
+            <i class="fas fa-medal"></i>
+        </div>
+        <h2 style="font-family: 'Playfair Display'; margin-bottom: 20px; font-size: 2rem;">Garantia de 7 Dias</h2>
+        <p style="max-width: 600px; margin: 0 auto; font-size: 1.1rem;">Se em 7 dias você não sentir que este material te ajudou a dar o primeiro passo na sua reconstrução emocional, devolvemos 100% do seu dinheiro. Sem questionamentos.</p>
+    </section>
+    
+    <!-- Final CTA -->
+    <section id="cta" style="padding: 80px 20px; text-align: center; background: white;">
+        <h2 style="font-family: 'Playfair Display'; color: #6a4ba9; font-size: 2.5rem; margin-bottom: 20px;">Está pronta(o) para se libertar?</h2>
+        <p style="font-size: 1.2rem; max-width: 600px; margin: 0 auto 30px;">Pare de adiar sua felicidade. Comece hoje sua jornada de reconstrução com o método que já ajudou milhares de pessoas.</p>
+        
+        <div style="max-width: 400px; margin: 0 auto; background: #f8f5ff; padding: 30px; border-radius: 10px;">
+            <div style="display: flex; justify-content: center; gap: 10px; margin-bottom: 15px;">
+                <span style="text-decoration: line-through; color: #999;">R$ 97,00</span>
+                <span style="font-weight: 700; font-size: 1.5rem; color: #6a4ba9;">R$ 7,90</span>
+            </div>
+            
+            <a href="#" class="cta-button">
+                <i class="fas fa-lock"></i> QUERO ME LIBERTAR AGORA
+            </a>
+            
+            <div style="margin-top: 20px;">
+                <img src="https://www.mercadopago.com.br/org-img/MP3/API/logos/mercadopago.png" alt="Métodos de pagamento" style="max-width: 250px; margin: 0 auto; display: block;">
+                <p style="font-size: 0.8rem; margin-top: 10px;">Pagamento seguro via Mercado Pago</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 Desapegar para Viver | Todos os direitos reservados</p>
+        <p style="margin-top: 10px;">Este produto não substitui acompanhamento psicológico profissional quando necessário.</p>
+    </footer>
+    
+    <!-- Countdown Timer Script -->
+    <script>
+        // Contador regressivo
+        function updateCountdown() {
+            let hours = 4;
+            let minutes = 59;
+            let seconds = 32;
+            
+            const timer = setInterval(() => {
+                seconds--;
+                
+                if (seconds < 0) {
+                    seconds = 59;
+                    minutes--;
+                }
+                
+                if (minutes < 0) {
+                    minutes = 59;
+                    hours--;
+                }
+                
+                if (hours < 0) {
+                    clearInterval(timer);
+                    document.getElementById('countdown').textContent = "Oferta expirada!";
+                    document.getElementById('countdown-box').textContent = "Oferta expirada!";
+                    return;
+                }
+                
+                const timeString = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+                document.getElementById('countdown').textContent = timeString;
+                document.getElementById('countdown-box').textContent = timeString;
+            }, 1000);
+        }
+        
+        // Número de clientes animado
+        function animateValue(id, start, end, duration) {
+            let startTimestamp = null;
+            const element = document.getElementById(id);
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                element.innerHTML = Math.floor(progress * (end - start) + start;
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+        
+        // Iniciar quando a página carregar
+        window.onload = function() {
+            updateCountdown();
+            animateValue("customer-count", 1000, 1247, 2000);
+        };
+    </script>
+</body>
+</html>
